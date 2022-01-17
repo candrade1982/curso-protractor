@@ -1,0 +1,52 @@
+{
+  "name": "curso-protractor-tat",
+  "version": "1.0.0",
+  "description": "Projeto para o curso de Protractor da Escola TAT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix",
+    "pretest:github": "webdriver-manager update --versions.chrome 81.0.4044.138",
+    "pretest:local": "webdriver-manager update",
+    "test": "npm run test:chrome && npm run test:firefox",
+    "test:chrome": "protractor configurations/chromeConfig.js",
+    "test:firefox": "protractor configurations/firefoxConfig.js"
+  },
+  "standard": {
+    "globals": [
+      "beforeAll",
+      "beforeEach",
+      "browser",
+      "by",
+      "describe",
+      "element",
+      "expect",
+      "faker",
+      "helper",
+      "homepage",
+      "it"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candrade1982/curso-protractor-tat.git"
+  },
+  "keywords": [
+    "protractor",
+    "testing",
+    "e2e"
+  ],
+  "author": "Cecilia Andrade <candrade1982@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/candrade1982/curso-protractor-tat.git/issues"
+  },
+  "homepage": "https://github.com/candrade1982/curso-protractor-tat.git#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "protractor": "^7.0.0",
+    "protractor-helper": "^4.2.1",
+    "standardjs": "^1.0.0-alpha"
+  }
+}
